@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('code_criteria');
             $table->string('criteria');
-            $table->integer('weight');
+            $table->double('weight');
             $table->enum('type', ['benefit', 'cost']);   
             $table->timestamps();
         });

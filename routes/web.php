@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlternativeController;
+use App\Http\Controllers\CriteriaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
@@ -34,7 +35,10 @@ Route::get('/welcome', function () {
 
 Route::get('/alternative', [AlternativeController::class, 'index'])->name('alternative');
 Route::get('/create', [AlternativeController::class, 'create'])->name('alternative.create');
+Route::post('/alternative', [AlternativeController::class, 'store'])->name('alternative.store');
 
+Route::get('/criterias', [CriteriaController::class, 'index'])->name('criteria');
+Route::get('/create', [AlternativeController::class, 'create'])->name('alternative.create');
 Route::post('/alternative', [AlternativeController::class, 'store'])->name('alternative.store');
 
 

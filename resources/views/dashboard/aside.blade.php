@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link text-white " href="{{route('alternative')}}">
+                <a class="nav-link text-white " href="dashbaord">
 
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">dashboard</i>
@@ -30,27 +30,26 @@
                         <i class="material-icons opacity-10">table_view</i>
                     </div>
 
-                    <span class="nav-link-text ms-1">Tables</span>
+                    <span class="nav-link-text ms-1">Perhitungan</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white " href="./pages/billing.html">
-
+                <a class="nav-link text-white " href="{{route('criteria')}}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">receipt_long</i>
                     </div>
 
-                    <span class="nav-link-text ms-1">Billing</span>
+                    <span class="nav-link-text ms-1">Criteria</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white " href="./pages/virtual-reality.html">
+                <a class="nav-link text-white " href="{{route('alternative')}}">
 
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">view_in_ar</i>
                     </div>
 
-                    <span class="nav-link-text ms-1">Virtual Reality</span>
+                    <span class="nav-link-text ms-1">Alternative</span>
                 </a>
             </li>
             <li class="nav-item">

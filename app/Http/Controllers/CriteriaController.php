@@ -12,9 +12,9 @@ class CriteriaController extends Controller
      */
     public function index()
     {
-        $kriteria = Criteria::orderBy('created_at', 'DESC')->get();
+        $criteria = Criteria::orderBy('created_at', 'DESC')->get();
 
-        return view('kriteria.index', compact('kriteria'));
+        return view('criterias.index', compact('criteria'));
     }
 
     /**
