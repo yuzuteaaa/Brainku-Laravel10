@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AlternativeController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HitungController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KriteriaController;
 use App\Http\Controllers\ProfileController;
@@ -37,4 +38,5 @@ Route::resource('kriteria', KriteriaController::class);
 
 Route::get('/createKriteria', [KriteriaController::class, 'create'])->name('kriteria.create');
 Route::get('/createAlternatif', [AlternativeController::class, 'create'])->name('alternatif.create');
+Route::get('/hitung', [HitungController::class, 'SAWGANK'])->name('hitung');
 require __DIR__.'/auth.php';
