@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlternativeController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
@@ -20,6 +21,22 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/welcome', function () {
     return view('welcome');
 });
+
+// Route::get('/dash', function () {
+//     return view('pages.index');
+// })->name('mainindex');
+
+// Route::controller(AlternativeController::class)->prefix('alternatives')->group(function () {
+//     Route::get('', 'index')->name('alternative');
+//     Route::get('create', 'create')->name('alternative.create');
+//     Route::post('store', 'store')->name('alternative.store');
+// });
+
+Route::get('/alternative', [AlternativeController::class, 'index'])->name('alternative');
+Route::get('/create', [AlternativeController::class, 'create'])->name('alternative.create');
+
+Route::post('/alternative', [AlternativeController::class, 'store'])->name('alternative.store');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

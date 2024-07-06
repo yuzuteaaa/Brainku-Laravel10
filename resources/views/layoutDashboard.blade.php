@@ -32,6 +32,7 @@
     @include('dashboard/aside')
     <main class="main-content border-radius-lg ">
         @include('dashboard/navbar')
+        @yield('content')
     </main>
     @include('dashboard/setting')
     <!--   Core JS Files   -->
@@ -55,7 +56,6 @@
 
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="assets/js/material-dashboard.min.js?v=3.1.0"></script>
-
 
 </body>
 
