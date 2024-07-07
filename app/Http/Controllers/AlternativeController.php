@@ -42,7 +42,7 @@ class AlternativeController extends Controller
             'C3' => 'required',
             'C4' => 'required',
             'C5' => 'required',
-            'C6' => 'required',
+            // 'C6' => 'required',
         ]);
         $alternatives = alternative::create([
             'nama_alternative' => $request->nama_alternative,
@@ -51,7 +51,7 @@ class AlternativeController extends Controller
             'C3' => $request->C3,
             'C4' => $request->C4,
             'C5' => $request->C5,
-            'C6' => $request->C6,
+            // 'C6' => $request->C6,
         ]);
         return redirect()->back()->with('success','Data berhasil disimpan');
     }
@@ -85,7 +85,7 @@ class AlternativeController extends Controller
             'C3' => 'required',
             'C4' => 'required',
             'C5' => 'required',
-            'C6' => 'required',
+            // 'C6' => 'required',
         ]);
     
         // Temukan data alternatif berdasarkan ID
@@ -99,7 +99,7 @@ class AlternativeController extends Controller
             'C3' => $request->C3,
             'C4' => $request->C4,
             'C5' => $request->C5,
-            'C6' => $request->C6,
+            // 'C6' => $request->C6,
         ]);
     
         // Redirect dengan pesan sukses
