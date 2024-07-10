@@ -53,7 +53,7 @@
                     <span class="nav-link-text ms-1">Data Alternatif</span>
                 </a>
             </li>
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link text-white " href="./pages/rtl.html">
 
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -62,8 +62,8 @@
 
                     <span class="nav-link-text ms-1">RTL</span>
                 </a>
-            </li>
-            <li class="nav-item">
+            </li> --}}
+            {{-- <li class="nav-item">
                 <a class="nav-link text-white " href="./pages/notifications.html">
 
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -72,7 +72,7 @@
 
                     <span class="nav-link-text ms-1">Notifications</span>
                 </a>
-            </li>
+            </li> --}}
             <li class="nav-item mt-3">
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
             </li>
@@ -108,7 +108,7 @@
             </li>
         </ul>
     </div>
-    <div class="sidenav-footer position-absolute w-100 bottom-0 ">
+    {{-- <div class="sidenav-footer position-absolute w-100 bottom-0 ">
         <div class="mx-3">
             <a class="btn btn-outline-primary mt-4 w-100"
                 href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-dashboard?ref=sidebarfree"
@@ -118,5 +118,5 @@
                 type="button">Upgrade to
                 pro</a>
         </div>
-    </div>
+    </div> --}}
 </aside>

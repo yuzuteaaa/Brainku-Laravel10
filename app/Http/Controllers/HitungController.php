@@ -32,7 +32,7 @@ class HitungController extends Controller
                 $type = $kriteria->type;
                 $min = $minMaxValues[$kode]['min'];
                 $max = $minMaxValues[$kode]['max'];
-        
+
                 if ($type == 'Benefit') {
                     $alternatifValues[$alternatif->id][$kode] = $max != 0 ? $alternatif->$kode / $max : 0;
                 } else if ($type == 'Const') {
@@ -40,7 +40,7 @@ class HitungController extends Controller
                 }
             }
         }
-        
+
 
 
         // Normalisasi bobot kriteria
@@ -49,21 +49,31 @@ class HitungController extends Controller
             return [$item->kode_kriteria => $item->bobot_kriteria / $totalBobot];
         });
 
-        // Mendapatkan nilai WP untuk setiap alternatif
-        $ValueSAW = [];
+        // // Mendapatkan nilai WP untuk setiap alternatif
+        // $ValueSAW = [];
+        // foreach ($alternatifs as $alternatif) {
+        //     $wp = 1;
+        //     foreach ($kriterias as $kriteria) {
+        //         $kode = $kriteria->kode_kriteria;
+        //         $wp *= pow($alternatifValues[$alternatif->id][$kode], $normalizedWeights[$kode]);
+        //     }
+        //     $ValueSAW[$alternatif->id] = $wp;
+        // }
+        $sawValues = [];
         foreach ($alternatifs as $alternatif) {
-            $wp = 1;
+            $saw = 0;
             foreach ($kriterias as $kriteria) {
                 $kode = $kriteria->kode_kriteria;
-                $wp *= pow($alternatifValues[$alternatif->id][$kode], $normalizedWeights[$kode]);
+                $bobot = $kriteria->bobot_kriteria; // Menggunakan bobot langsung tanpa normalisasi
+                $saw += $alternatifValues[$alternatif->id][$kode] * $bobot;
             }
-            $ValueSAW[$alternatif->id] = $wp;
+            $sawValues[$alternatif->id] = $saw;
         }
 
         // Mengurutkan alternatif berdasarkan nilai WP tertinggi ke terendah
-        arsort($ValueSAW);
+        arsort($sawValues);
 
         // Kirim data ke view
-        return view('admin.hitung', compact('ValueSAW', 'alternatifs', 'kriterias', 'alternatifValues'));
+        return view('admin.hitung', compact('sawValues', 'alternatifs', 'kriterias', 'alternatifValues'));
     }
 }

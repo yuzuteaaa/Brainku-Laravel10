@@ -143,7 +143,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach ($ValueSAW as $id => $nilaiSAW)
+                                                @foreach ($sawValues as $id => $nilaiSAW)
                                                     <tr>
                                                         <td class="border text-center px-4 py-2">
                                                             {{ $alternatifs->find($id)->nama_alternative }}</td>
